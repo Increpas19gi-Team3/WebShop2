@@ -11,61 +11,42 @@
 
 <!-- top 메뉴바 -->
 <c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
-
-
-	<strong>
-	로그인 한 이름 : ${sessionScope.NAME} <br />
-	로그인 한 아이디 : ${sessionScope.USERID }
-	</strong>
 	
-	<c:if test="${param.forget == 'Pw' }">
 	
 		<div class="sign_popup popup"  style="margin-left: 30%;"> <!-- forgetPw -->
-	      <h2>FORGET PASSWORD</h2>
-	      <form class="" action="index.html" method="post">
+	      
+	      <c:if test="${param.forget == 'Pw' }">
+	      	<h2>FORGET PASSWORD</h2>
+	      </c:if>
+	      
+	      <c:if test="${param.forget == 'Id' }">
+	      	<h2>FORGET ID</h2>
+	      </c:if>
+	      
+	      
+	      <form class="" action="find_Result.jsp" method="post">
+	      
+			<c:if test="${param.forget == 'Pw' }">
+		        <div class="row">
+		          <input type="text" name="id" placeholder="아이디">
+		        </div>
+	        </c:if>	        
+	        
 	        <div class="row">
-	          <input type="text" name="" value="" id="login_id" placeholder="아이디">
+	          <input type="text" name="name" placeholder="이름">
 	        </div>
 	        <div class="row">
-	          <input type="text" name="" value="" id="login_name" placeholder="이름">
+	          <input type="text" name="phone" placeholder="휴대폰 번호">
 	        </div>
 	        <div class="row">
-	          <input type="text" name="" value="" id="login_phone" placeholder="휴대폰 번호">
+	          <input type="text" name="email" placeholder="이메일">
 	        </div>
 	        <div class="row">
-	          <input type="text" name="" value="" id="login_email" placeholder="이메일">
-	        </div>
-	        <div class="row">
-	          <input type="submit" name="" value="비밀번호 찾기">
-	        </div>
-	      </form>
-	    </div>
-	
-	</c:if>
-
-
-	
-    <c:if test="${param.forget == 'Id' }">
-    
-	    <div class="sign_popup popup"  style="margin-left: 30%;"><!-- forgetId -->
-	      <h2>FORGET ID</h2>
-	      <form class="" action="index.html" method="post">
-	        <div class="row">
-	          <input type="text" name="" value="" id="login_name" placeholder="이름">
-	        </div>
-	        <div class="row">
-	          <input type="text" name="" value="" id="login_phone" placeholder="휴대폰 번호">
-	        </div>
-	        <div class="row">
-	          <input type="text" name="" value="" id="login_phone" placeholder="이메일">
-	        </div>
-	        <div class="row">
-	          <input type="submit" name="" value="아이디 찾기">
+	          <input type="submit" value="비밀번호 찾기">
 	        </div>
 	      </form>
 	    </div>
 
-	</c:if>
 
 </div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
