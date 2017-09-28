@@ -1,5 +1,4 @@
 <%-- 아이디, 비밀번호 찾기 --%>
-
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -14,13 +13,10 @@
 	String url = "jdbc:oracle:thin:@localhost:1521:XE";
 	String uid = "system";
 	String pass = "oracle";
-	
-	String sql = "SELECT NAME, USERID, PWD, EMAIL, PHONE, ADMIN ";
-	System.out.println("sql1="+sql);
-	sql += "FROM WEBSHOP ";
-	System.out.println("sql2="+sql);
 %>
 <%
+	String sql = "SELECT USERID, PWD FROM WEBSHOP ";
+	//"SELECT NAME, USERID, PWD, EMAIL, PHONE, ADMIN FROM WEBSHOP ";
 	
 	//"insert into member values(?, ?, ?, ?, ?, ?)"; 
 
@@ -31,12 +27,19 @@
 	String phone = request.getParameter("phone");
 	String email = request.getParameter("email");
 
-	/* 
-	if(id == null && id.equals("")){ // 아이디 찾기
-		sql += "WHERE NAME LIKE '손가연' AND PHONE LIKE '010-111-1111' AND EMAIL LIKE 'son@mail.com'";
+	sql += "WHERE NAME LIKE '"+name+"' AND PHONE LIKE '"+phone+"' AND EMAIL LIKE '"+email+"'";
+	if(id != null){ // 아이디 찾기
+		//sql += "WHERE NAME LIKE '손가연' AND PHONE LIKE '010-111-1111' AND EMAIL LIKE 'cyp0507@gmail.com'";
+		sql += " AND USERID LIKE '"+id+"' ";
+	}
+	
+	/* ??? 로 작업시
+	if(id == null){ // 아이디 찾기
+		sql += "WHERE USERID LIKE '?' AND NAME LIKE '?' AND PHONE LIKE '?' AND EMAIL LIKE '?' "
 	}else{ //비밀번호 찾기
-		sql += "WHERE USERID LIKE 'son' AND NAME LIKE '손가연' AND PHONE LIKE '010-111-1111' AND EMAIL LIKE 'son@mail.com'";
-	} */
+		sql += "WHERE NAME LIKE '?' AND PHONE LIKE '?' AND EMAIL LIKE '?'";
+	}
+	*/
 %>
 
 
@@ -50,7 +53,7 @@
 <!-- top 메뉴바 -->
 <c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
 
-	<%//= sql %>
+	<%= sql %>
 	
 
 </div>
