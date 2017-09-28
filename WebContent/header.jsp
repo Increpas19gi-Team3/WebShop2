@@ -12,10 +12,4 @@
   <link rel="stylesheet" href="css/about.css"> <!-- about전용 CSS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
-
-
-
-
-  <!-- <div class="wrapper event news cart"> -->
-    
+<body> 
