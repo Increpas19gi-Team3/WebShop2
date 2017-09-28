@@ -12,6 +12,11 @@
 <!-- top 메뉴바 -->
 <c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
 
+
+	<strong>
+	로그인 한 이름 : ${sessionScope.NAME} <br />
+	로그인 한 아이디 : ${sessionScope.USERID }
+	</strong>
 	
 	<c:if test="${param.forget == 'Pw' }">
 	

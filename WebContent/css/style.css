@@ -2,8 +2,8 @@
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 
 *{
-	/* ÆĞµùÀÌ³ª º¸´õ¸¦ ¹Ú½º ³Êºñ¿¡ Æ÷ÇÔ
-¹Ú½º Å©±â¸¦ ÀÏÁ¤ÇÏ°Ô °íÁ¤ */
+	/* íŒ¨ë”©ì´ë‚˜ ë³´ë”ë¥¼ ë°•ìŠ¤ ë„ˆë¹„ì— í¬í•¨
+ë°•ìŠ¤ í¬ê¸°ë¥¼ ì¼ì •í•˜ê²Œ ê³ ì • */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -71,6 +71,7 @@ body{
 .header .gnb{
   padding: 50px 0 0;
   float: right;
+  vertical-align: middle; /* ì–´ì„œì˜¤ì„¸ìš” ê¸€ì ì¤‘ì•™ì •ë ¬*/
 }
 .header .gnb ul{
   overflow: hidden;
@@ -131,12 +132,12 @@ body{
   right: 0;
   
   /*
-  ¾Èº¸ÀÌ°Ô ÇÏ´Â ±â´É 2°¡Áö
-  - opacity: 0; ºÒÅõ¸íÇÏ°Ô ÇÔ
+  ì•ˆë³´ì´ê²Œ í•˜ëŠ” ê¸°ëŠ¥ 2ê°€ì§€
+  - opacity: 0; ë¶ˆíˆ¬ëª…í•˜ê²Œ í•¨
   - visibility: hidden;   
   */
   opacity: 0;  
-  z-index: 1; /*³ëÃâ ½ÃÄÑ¾ß ÇÏ´Â ¿ä¼ÒÀÇ ·¹ÀÌ¾Æ¿ôÀ» °¡Àå À§¿¡ ¿À°Ô ÇÔ*/
+  z-index: 1; /*ë…¸ì¶œ ì‹œì¼œì•¼ í•˜ëŠ” ìš”ì†Œì˜ ë ˆì´ì•„ì›ƒì„ ê°€ì¥ ìœ„ì— ì˜¤ê²Œ í•¨*/
   overflow: hidden;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -144,7 +145,7 @@ body{
 }
 .container .tab_wrap input:checked + .tab_inner .tab_con{
 	/*
-	º¸ÀÌ°Ô ÇÏ´Â ±â´É 2°¡Áö: 
+	ë³´ì´ê²Œ í•˜ëŠ” ê¸°ëŠ¥ 2ê°€ì§€: 
 	- opacity: 1;
 	- visibility: visible; 
 	*/
@@ -397,7 +398,7 @@ body{
   color: #333;
 }
 
-/* ÆË¾÷Ã¢ ´İ´Â css */
+/* íŒì—…ì°½ ë‹«ëŠ” css */
 /* .popup .close{
   padding: 10px;
   position: absolute;
