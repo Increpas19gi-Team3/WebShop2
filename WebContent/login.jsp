@@ -14,34 +14,37 @@
 
 
 
-<p>test</p>
-여기는 테스트입니다.
+
+
+
 
 
     <div class="login_popup popup">
       <h2>LOGIN</h2>
-      <form class="" action="index.html" method="post">
+      <form action="login_db.jsp" method="post">
         <div class="row">
-          <input type="text" name="" value="" id="login_id" placeholder="아이디">
+          <input type="text" name="USERID" value="" id="USERID" placeholder="아이디" maxlength="20" >
         </div>
         <div class="row">
-          <input type="text" name="" value="" id="login_pass" placeholder="비밀번호">
+          <input type="text" name="PWD" value="" id="PWD" placeholder="비밀번호" maxlength="15">
         </div>
         <div class="row">
           <input type="submit" name="" value="로그인">
         </div>
       </form>
       <div class="find_row">
-        <a href="find_Id.jsp">아이디 찾기</a>
-        <a href="find_Pw.jsp">비밀번호 찾기</a>
+        <a href="find.jsp?forget=Id">아이디 찾기</a>
+        <a href="find.jsp?forget=Pw">비밀번호 찾기</a>
         <a href="register.jsp">회원가입</a>
       </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     
 </div>   
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

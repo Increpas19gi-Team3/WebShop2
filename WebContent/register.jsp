@@ -13,39 +13,30 @@
 <c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
 
 
-
-
-
-	
-	
 	<div class="sign_popup popup" style="margin-left: 30%;">
       <h2>SIGN</h2>
-      <form class="" action="index.html" method="post">
+      <form class="" action="join_db.jsp" method="post">
         <div class="row">
-          <input type="text" name="" value="" id="login_id" placeholder="아이디">
+          <input type="text" name="USERID" value="" id="USERID" placeholder="아이디">
         </div>
         <div class="row">
-          <input type="text" name="" value="" id="login_pass" placeholder="비밀번호">
+          <input type="text" name="PWD" value="" id="PWD" placeholder="비밀번호">
         </div>
         <div class="row">
-          <input type="text" name="" value="" id="login_name" placeholder="이름">
+          <input type="text" name="NAME" value="" id="NAME" placeholder="이름">
         </div>
         <div class="row">
-          <input type="text" name="" value="" id="login_phone" placeholder="휴대폰 번호">
+          <input type="text" name="PHONE" value="" id="PHONE" placeholder="휴대폰 번호">
         </div>
         <div class="row">
-          <input type="text" name="" value="" id="login_email" placeholder="이메일">
+          <input type="text" name="EMAIL" value="" id="EMAIL" placeholder="이메일">
         </div>
+        
         <div class="row">
-          <input type="submit" name="" value="회원가입">
+          <input type="submit" name="" value="회원가입" onclick="return loginCheck() ">
         </div>
       </form>
     </div>
-
-
-
-
-
 
 </div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
