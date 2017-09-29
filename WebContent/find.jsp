@@ -1,4 +1,4 @@
-<%-- 아이디, 비밀번호 찾기 --%>
+<%-- 아이디 찾기 --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -15,34 +15,42 @@
 	
 		<div class="sign_popup popup"  style="margin-left: 30%;"> <!-- forgetPw -->
 	      
-	      <c:if test="${param.forget == 'Pw' }">
-	      	<h2>FORGET PASSWORD</h2>
-	      </c:if>
-	      
-	      <c:if test="${param.forget == 'Id' }">
-	      	<h2>FORGET ID</h2>
-	      </c:if>
-	      
-	      
-	      <form class="" action="find_Result.jsp" method="post">
-	      
-			<c:if test="${param.forget == 'Pw' }">
-		        <div class="row">
-		          <input type="text" name="id" placeholder="아이디">
-		        </div>
-	        </c:if>	        
-	        
+	      <form class="" action="login.jsp" method="post">
+	      	
+	      	<c:if test="${requestScope.forget == 'Id'}">
+	      		<h2>FORGET ID</h2>
+	      		<hr>
+	      		
+	      		<c:choose>
+	      			<c:when test="${empty requestScope.dbId}">
+	      				<h2>ID를 찾을 수 없습니다.</h2>
+	      			</c:when>
+	      			<c:otherwise>
+						<h2>ID: ${requestScope.dbId}</h2>
+	      			</c:otherwise>
+	      		</c:choose>
+	      		
+	      		<c:if test="">
+	      		</c:if>
+	      	</c:if>
+	      	
+	      	<c:if test="${requestScope.forget == 'Pw'}">
+	      		<h2>FORGET PASSWORD</h2>
+	      		<hr>
+	      		
+	      		<c:choose>
+	      			<c:when test="${empty requestScope.dbPw}">
+	      				<h2>Password를 찾을 수 없습니다.</h2>
+	      			</c:when>
+	      			<c:otherwise>
+						<h2>Password: ${requestScope.dbPw}</h2>
+	      			</c:otherwise>
+	      		</c:choose>
+	      		
+	      	</c:if>
+	      	<br /><br />
 	        <div class="row">
-	          <input type="text" name="name" placeholder="이름">
-	        </div>
-	        <div class="row">
-	          <input type="text" name="phone" placeholder="휴대폰 번호">
-	        </div>
-	        <div class="row">
-	          <input type="text" name="email" placeholder="이메일">
-	        </div>
-	        <div class="row">
-	          <input type="submit" value="비밀번호 찾기">
+	          <input type="submit" value="로그인 화면으로 이동">
 	        </div>
 	      </form>
 	    </div>
