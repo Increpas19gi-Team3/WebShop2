@@ -33,8 +33,8 @@
         </div>
       </form>
       <div class="find_row">
-        <a href="find.jsp?forget=Id">아이디 찾기</a>
-        <a href="find.jsp?forget=Pw">비밀번호 찾기</a>
+        <a href="find_Id.jsp">아이디 찾기</a>
+        <a href="find_Pw.jsp">비밀번호 찾기</a>
         <a href="register.jsp">회원가입</a>
       </div>
     </div>

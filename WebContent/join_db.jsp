@@ -31,11 +31,11 @@ String PHONE = request.getParameter("PHONE");
 String ADMIN = "0"; //사용자로 저장
 
 //데이터 체크
-if((NAME != null || NAME.equals("")) || 
-	(USERID != null || USERID.equals("")) ||  
-	(PWD != null || PWD.equals("")) || 
-	(EMAIL != null || EMAIL.equals("")) ||  
-	(PHONE != null || PHONE.equals(""))){
+if((NAME != null || !NAME.equals("")) || 
+	(USERID != null || !USERID.equals("")) ||  
+	(PWD != null || !PWD.equals("")) || 
+	(EMAIL != null || !EMAIL.equals("")) ||  
+	(PHONE != null || !PHONE.equals(""))){
 
 	//System.out.print("NAME="+NAME+", USERID="+USERID+", PWD="+PWD+", EMAIL ="+EMAIL+", PHONE="+PHONE+", ADMIN="+ADMIN);
 	

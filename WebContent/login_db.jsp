@@ -48,7 +48,7 @@ try{
 		dbName= rs.getString("NAME");
 		dbAdmin = rs.getString("ADMIN");
 		dbPass = rs.getString("PWD");
-		System.out.println("dbName: "+dbName + ",  dbAdmin:"+dbAdmin+", dbPass:"+dbPass);
+		//System.out.println("login_db: dbName: "+dbName + ",  dbAdmin:"+dbAdmin+", dbPass:"+dbPass);
 	}
 	
 }catch(Exception e){
@@ -62,24 +62,12 @@ try{
 	}
 }//finally 끝
 
-//고객 정보가 있다면
-		//세션에 저장
-		// name
-		// admin	
-		// 세션 저장 후에. sendRedirect(index.jsp) 보냄
-	
-	// 고객 정보가 없다면
-		// 로그인 창으로 보내기
-		// sendRedirect (login.jsp) 로 보내기
-		
-	// 로그인 실패시 sendRedirect (login.jsp) 로 보내기
-	
-
-	if(PWD.equals(dbPass)) {
-		session.setAttribute("NAME", dbName);
+	//PWD가 "" 가 아니면서 
+	if(PWD.length() > 0 && (PWD.equals(dbPass))) {//고객 정보가 있다면
+		session.setAttribute("NAME", dbName);//세션에 저장
 		session.setAttribute("ADMIN", dbAdmin);
 		response.sendRedirect("index.jsp");	
-	}else{
+	}else{// 로그인 실패시 sendRedirect (login.jsp) 로 보내기
 		response.sendRedirect("login.jsp");
 	}
 %>

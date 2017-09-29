@@ -20,6 +20,7 @@
         <ul>
         	<c:if test="${sessionScope.NAME != null}">
         		<li><a>${sessionScope.NAME}님 어서오세요.</a></li>
+        		<li><a href="logout.jsp">로그아웃</a></li>
         	</c:if>
         	<c:if test="${sessionScope.NAME == null}">
         		<li><a href="login.jsp">login</a></li>
