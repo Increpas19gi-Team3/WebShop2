@@ -88,4 +88,9 @@
 	} else {
 		System.out.println("0");
 	}
+	
+
+	RequestDispatcher dispatcher = request.getRequestDispatcher("leave_Result.jsp");
+	request.setAttribute("result", result);
+	dispatcher.forward(request, response);
 %>
