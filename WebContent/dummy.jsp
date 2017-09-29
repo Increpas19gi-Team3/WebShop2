@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%
 	session.setAttribute("NAME", "한범석");
-	session.setAttribute("USERID", "han");
+	session.setAttribute("USERID", "han");    
 %>
 
 <!DOCTYPE html>

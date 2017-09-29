@@ -8,11 +8,16 @@
           <li><a href="">이용약관</a></li>
           <li><a href="">개인정보처림방침</a></li>
           <li><a href="">청소년보호정책</a></li>
+          
+      <!-- 페이지 유지 테스트용 -->
+      <% System.out.println("footer=>" + session.getAttribute("USERID")); %>
+      
           <li><a href="leave.jsp">회원탈퇴</a></li>
           <li><a href="">고객센터</a></li>
           <li><a href="">제휴문의</a></li>
         </ul>
       </div>
+      
       <div class="site_info">
         <div class="logo">
           <a href="index.jsp">Web Shop</a>
