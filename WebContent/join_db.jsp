@@ -65,9 +65,20 @@ if((NAME != null || !NAME.equals("")) ||
 }//End of if : 데이터 체크
 
 if(result == 1) {//가입 성공시
-	response.sendRedirect("index.jsp");	
+	//response.sendRedirect("index.jsp");	
+%>
+	<script type="text/javascript" >
+		alert("회원가입 되었습니다. 로그인을 해주세요.");
+		location.href="login.jsp";
+	</script>
+<%
 }else{
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
+%>
+	<script type="text/javascript" >
+		alert("회원가입이 실패했습니다. 다시 시도해 주세요.");
+		location.href="register.jsp";
+	</script>
+<%
 }
-
 %>
