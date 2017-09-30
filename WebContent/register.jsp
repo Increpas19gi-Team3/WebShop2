@@ -33,10 +33,54 @@
         </div>
         
         <div class="row">
-          <input type="submit" name="" value="회원가입" onclick="return loginCheck() ">
+          <input type="submit" name="" value="회원가입" onclick="return input_check_func()">
         </div>
       </form>
     </div>
+
+
+	<script type="text/javascript">
+	function input_check_func() {
+		var id = document.getElementById('USERID').value;
+		var pw = document.getElementById('PWD').value;
+		var nm = document.getElementById('NAME').value;
+		var ph = document.getElementById('PHONE').value;
+		var em = document.getElementById('EMAIL').value;
+
+		if (id == null || id == "") {
+			alert("아이디를 입력하셔야 합니다.");
+			return false;
+		} else if (pw == null || pw == "") {
+			alert("패스워드를 입력하셔야 합니다.");
+			return false;
+		} else if (nm == null || nm == "") {
+			alert("이름을 입력하셔야 합니다.");
+			return false;
+		}
+		regNumber = /^[0-9]*$/;
+
+		if (regNumber.test(nm)) {
+			alert('이름은 한글이나 영어로만 쓰셔야 합니다.');
+			return false;
+		} else if (ph == null || ph == "") {
+			alert("핸드폰번호를 입력하셔야 합니다.");
+			return false;
+		} else if (em == null || em == "") {
+			alert("이메일을 입력하셔야 합니다.");
+			return false;
+		}
+		regEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+		if (!regEmail.test(em)) {
+			alert('이메일 주소가 올바르지 않습니다.');
+			return false;
+		} else {
+			return true;
+		}
+	}
+	</script>
+
+
 
 </div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>

@@ -29,7 +29,7 @@
           <input type="text" name="PWD" value="" id="PWD" placeholder="비밀번호" maxlength="15">
         </div>
         <div class="row">
-          <input type="submit" name="" value="로그인">
+          <input type="submit" name="" value="로그인" onclick="return input_login()">
         </div>
       </form>
       <div class="find_row">
@@ -39,6 +39,24 @@
       </div>
     </div>
 
+	<script type="text/javascript">
+	function input_login(){
+		var id = document.getElementById('USERID').value;
+		var pw = document.getElementById('PWD').value;
+		
+		if(id == null || id == ""){
+			alert("아이디를 입력 하세요.");
+			return false;
+		}
+		else if(pw == null || pw == ""){
+				alert("패스워드를 입력 하세요.")
+				return false;
+		}
+		else{
+			return true;
+		}
+	}	
+	</script>
 
 
 
