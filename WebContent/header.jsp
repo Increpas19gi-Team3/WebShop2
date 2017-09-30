@@ -10,6 +10,7 @@
   <title>index</title>
   <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="stylesheet" href="css/about.css"> <!-- about전용 CSS -->
+  <link rel="stylesheet" href="css/leave.css"> <!-- leave전용 CSS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body> 

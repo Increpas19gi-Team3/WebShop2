@@ -132,6 +132,12 @@ body .entries .entry:nth-child(2n) .title.big:before {
 </head>
 
 <body>
+
+
+여기까지 주석 * -->
+
+
+	
 	<div class="timeline">
 		<div class="entries">
 		
@@ -232,19 +238,12 @@ body .entries .entry:nth-child(2n) .title.big:before {
 		</div>
 	</div>
 
-</body>
-</html>
-
-여기까지 주석 * -->
-
-
-	<form action="leave_out.jsp">
-		<input type="submit" value="탈퇴">
-	</form>
+	<%-- 탈퇴관련 문구 끝 --%>
 
 	<%
-		System.out.println("leave=>" + session.getAttribute("USERID"));
+		//System.out.println("leave=>" + session.getAttribute("USERID"));
 	%>
+	<br /><br /><br /><br />
 
 </div>
 <c:import url="footer.jsp" charEncoding="UTF-8"></c:import>
