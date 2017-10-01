@@ -9,10 +9,10 @@
 	color: #1D1D1D;/* #fff; */
 }
 
-/* 현재 footer까지 그리는 문제가 있음. 수정필요 */
+/* 현재 footer까지 그리는 문제가 있음. 수정필요 - 중앙선에 관한 속성*/
 .timeline:before {
 	content: '';
-	position: fixed;
+	position: absolute; /* fixed; 고정 위치에서 절대 위치로 바꿈*/ 
 	top: 0px;
 	left: 50%;
 	bottom: 0px; /* 커서가 움직이는 위치까지 흰색줄을 그림 */
@@ -22,7 +22,8 @@
 	/* -webkit-transform: translateX(-50%);
 	transform: translateX(-50%); */
 	
-	width: 4px;
+	width: 4px; /* 중앙선에 관한 굵기 */
+	height: 1650px; /* 중앙선의 길이 position: absolute; 절대 위치로 바꾸고 선-길이를 임의의 주었음 */
 	background-color: #fff;
 }
 
@@ -52,6 +53,7 @@
 	position: relative;
 }
 
+/* 중앙에 나오는 원모양에 대한 속성 */
 .timeline .entries .entry .title:before {
 	content: '';
 	position: absolute;
