@@ -66,6 +66,7 @@ try{
 	if(PWD.length() > 0 && (PWD.equals(dbPass))) {//고객 정보가 있다면
 		session.setAttribute("NAME", dbName);//세션에 저장
 		session.setAttribute("ADMIN", dbAdmin);
+		session.setAttribute("USERID", USERID);		
 		response.sendRedirect("index.jsp");	
 	}else{// 로그인 실패시 sendRedirect (login.jsp) 로 보내기
 		response.sendRedirect("login.jsp");

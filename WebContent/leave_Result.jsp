@@ -4,10 +4,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%
-	
-%>
-
 <!-- 헤더 인클루드 -->
 <c:import url="header.jsp" charEncoding="UTF-8"></c:import>
 <div class="wrapper news cart">
@@ -26,19 +22,23 @@
 		<!-- forgetPw -->
 		<form class="" action="login.jsp" method="post">
 			<c:choose>
-				<c:when test="${empty requestScope.result == 1}">
+				<c:when test="${requestScope.result == 1}">
 					<!-- 1 : 성공 -->
+					<% 
+						// session 내용 완전 제거
+						session.invalidate();
+					%>
 					<script type="text/javascript">
 						alert("회원 탈퇴 되셨습니다.");
-						location.href = "login.jsp";
+						location.href = "index.jsp";
 					</script>
 				</c:when>
 				
-				<c:when test="${empty requestScope.result == 0}">
+				<c:when test="${requestScope.result == 0}">
 					<!-- 0 : db 적용안됨 -->
 					<script type="text/javascript">
 						alert("데이터 베이스에서 불러올수 없습니다.");
-						location.href = "login.jsp";
+						location.href = "leave.jsp";
 					</script>
 				</c:when>
 				
@@ -46,7 +46,7 @@
 					<!-- else 결과값 -->
 					<script type="text/javascript">
 						alert("알 수 없는 오류가 생겼습니다.");
-						location.href = "login.jsp";
+						location.href = "leave.jsp";
 					</script>
 				</c:otherwise>							
 			</c:choose>

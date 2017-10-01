@@ -28,7 +28,7 @@
 
 	// DB SQL 결과값
 	int result = -2; 
-	System.out.println("leave_out=>" + session.getAttribute("USERID"));
+	//System.out.println("leave_out session=>" + session.getAttribute("USERID"));
 	
 	try {
 		
@@ -61,7 +61,7 @@
 		result = pstmt.executeUpdate();
 		// conn.commit();
 		// System.out.println("6");
-		System.out.println("DB적용결과값:"+result);		
+		//System.out.println("DB적용결과값:"+result);		
 
 	} catch (Exception e) {
 		e.printStackTrace();
@@ -77,9 +77,9 @@
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}	
-	
-	// session 내용 완전 제거
+	}
+		
+	/* // session 내용 완전 제거
 	session.invalidate();
 	// System.out.println("7");
 	
@@ -89,9 +89,10 @@
 	} else {
 		// Session이 유지가 되고 있지 않다면
 		System.out.println("0");
-	}
+	} */
+	
 	
 	RequestDispatcher dispatcher = request.getRequestDispatcher("leave_Result.jsp");
 	request.setAttribute("result", result);
-	dispatcher.forward(request, response);	
+	dispatcher.forward(request, response);
 %>

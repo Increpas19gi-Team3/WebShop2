@@ -10,7 +10,7 @@
           <li><a href="">청소년보호정책</a></li>
           
       <!-- 페이지 유지 테스트용 -->
-      <% System.out.println("footer=>" + session.getAttribute("USERID")); %>
+      <% //System.out.println("footer=>" + session.getAttribute("USERID")); %>
       
           <li><a href="leave.jsp">회원탈퇴</a></li>
           <li><a href="">고객센터</a></li>
