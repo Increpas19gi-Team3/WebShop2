@@ -37,22 +37,22 @@
 		
 		// 1. JDBC 드라이버 로드
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		System.out.println("1");
+		//System.out.println("1");
 		
 		// 2. 데이터 베이스 연결 객체인 Connection 생성		
 		conn = DriverManager.getConnection(url, uid, pass);
-		System.out.println("2");
+		//System.out.println("2");
 		
 		// 수동 커밋으로 변경		
 		// conn.setAutoCommit(false);
-		System.out.println("3");
+		// System.out.println("3");
 		
 		// 3. PreparedStatement 객체 생성하기
 		pstmt = conn.prepareStatement(sql);
-		System.out.println("4");
+		//System.out.println("4");
 		
 		System.out.println(USERID);
-		System.out.println("5");
+		//System.out.println("5");
 		
 		// 4. 바인딩 변수를 채운다.
 		pstmt.setString(1, USERID.trim());		
@@ -60,8 +60,8 @@
 		// 5.SQL문을 실행하여 결과 처리
 		result = pstmt.executeUpdate();
 		// conn.commit();
-		System.out.println("6");
-		System.out.println("DB적용결과값:"+result);
+		// System.out.println("6");
+		System.out.println("DB적용결과값:"+result);		
 
 	} catch (Exception e) {
 		e.printStackTrace();
@@ -77,20 +77,21 @@
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}	
 	
 	// session 내용 완전 제거
 	session.invalidate();
-	System.out.println("7");
+	// System.out.println("7");
 	
 	if (request.isRequestedSessionIdValid() == true) {
+		// Session이 유지가 되고 있다면 
 		System.out.println("1");
 	} else {
+		// Session이 유지가 되고 있지 않다면
 		System.out.println("0");
 	}
 	
-
 	RequestDispatcher dispatcher = request.getRequestDispatcher("leave_Result.jsp");
 	request.setAttribute("result", result);
-	dispatcher.forward(request, response);
+	dispatcher.forward(request, response);	
 %>

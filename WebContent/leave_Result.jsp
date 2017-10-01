@@ -16,7 +16,7 @@
 	<c:import url="topMenu.jsp" charEncoding="UTF-8"></c:import>
 	<div class="sign_popup popup" style="margin-left: 30%;">
 
-<!-- 일단 데이터 베이스에서 로그인 상태의 아이디는 삭제가 가능함
+		<!-- 일단 데이터 베이스에서 로그인 상태의 아이디는 삭제가 가능함
 (한번 삭제후 데이터 베이스에서 commit을 눌러줘야함)
 그러나 그 이후로 500이 뜸(로그인 상태창으로 돌아가야 하는데 안돌아감)
 코드가 불안전 한것 같아서 고칠려고 찾아보는 중.. 
@@ -25,32 +25,31 @@
 
 		<!-- forgetPw -->
 		<form class="" action="login.jsp" method="post">
-
-			<h2>회원탈퇴</h2>
-			<hr>
-
 			<c:choose>
 				<c:when test="${empty requestScope.result == 1}">
 					<!-- 1 : 성공 -->
-					<h2>회원 탈퇴 되셨습니다.</h2>
-					
+					<script type="text/javascript">
+						alert("회원 탈퇴 되셨습니다.");
+						location.href = "login.jsp";
+					</script>
 				</c:when>
+				
 				<c:when test="${empty requestScope.result == 0}">
 					<!-- 0 : db 적용안됨 -->
-					<h2>데이터 베이스에서 불러올수 없습니다.</h2>
+					<script type="text/javascript">
+						alert("데이터 베이스에서 불러올수 없습니다.");
+						location.href = "login.jsp";
+					</script>
 				</c:when>
+				
 				<c:otherwise>
 					<!-- else 결과값 -->
-					<h2>알 수 없는 오류가 생겼습니다.</h2>
-				</c:otherwise>
+					<script type="text/javascript">
+						alert("알 수 없는 오류가 생겼습니다.");
+						location.href = "login.jsp";
+					</script>
+				</c:otherwise>							
 			</c:choose>
-
-			<br /> <br />
-
-			<div class="row">
-				<input type="submit" value="로그인 화면으로 이동">
-			</div>
-
 		</form>
 	</div>
 
