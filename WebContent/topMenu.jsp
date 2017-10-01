@@ -20,6 +20,11 @@
         <ul>
         	<c:if test="${sessionScope.NAME != null}">
         		<li><a>${sessionScope.NAME}님 어서오세요.</a></li>
+        		
+        		<c:if test="${sessionScope.ADMIN == 1}">
+        			<li><a>관리자</a></li>
+        		</c:if>
+        		
         		<li><a href="logout.jsp">로그아웃</a></li>
         	</c:if>
         	<c:if test="${sessionScope.NAME == null}">
