@@ -28,7 +28,7 @@
 			
 			
 			<li><a href="cart.jsp">cart(0)</a></li>
-			<li><a href="myPage.jsp">my</a></li>
+			<li><a href="myPage_Select.jsp">my</a></li>
         </ul>
       </div>
     </div>
