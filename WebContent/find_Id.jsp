@@ -30,7 +30,7 @@
 	          <input type="text" name="email" placeholder="이메일">
 	        </div>
 	        <div class="row">
-	          <input type="submit" value="비밀번호 찾기">
+	          <input type="submit" value="아이디 찾기">
 	        </div>
 	      </form>
 	    </div>
