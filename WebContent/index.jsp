@@ -338,7 +338,7 @@
         </div>
         <input type="radio" id="tab_3" name="tab_menu">
         <div class="tab_inner">
-          <label for="tab_3">컴퓨터</label>
+          <label for="tab_3"><a href="./product/computer.jsp">컴퓨터</a></label>
           <div class="tab_con">
             <ul>
               <li>
