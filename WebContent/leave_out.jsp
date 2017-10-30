@@ -61,7 +61,7 @@
 		result = pstmt.executeUpdate();
 		// conn.commit();
 		// System.out.println("6");
-		//System.out.println("DB적용결과값:"+result);		
+		// System.out.println("DB적용결과값:"+result);		
 
 	} catch (Exception e) {
 		e.printStackTrace();

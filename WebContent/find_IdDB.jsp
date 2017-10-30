@@ -16,6 +16,7 @@
 	String uid = "system";
 	String pass = "oracle";
 %>
+
 <%
 	String dbId = ""; //db 에서 찾은 결과 id
 	String forget = "Id";//찾기 모드
